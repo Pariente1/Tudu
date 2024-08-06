@@ -1,0 +1,2 @@
+INSERT INTO tb_usuario set (nick_usuario,correo,password) values('Juan Carlos','jchavez4164@gmail.com','Prueba123');
+INSERT INTO tb_usuario(nick_usuario,correo,password) values('Juan Carlos 2','jchavez@gmail.com',crypt('prueba', gen_salt('bf')));
