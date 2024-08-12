@@ -1,0 +1,77 @@
+/* Importar la fuente Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #606062; /* Gris de fondo */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding: 40px;
+    width: 320px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-logo img {
+    width: 150px;
+    margin-bottom: 30px;
+}
+
+.login-input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.login-button {
+    width: 100%;
+    background-color: #F5CC39; /* Color amarillo */
+    color: #FFFFFF;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.login-button:hover {
+    background-color: #e6b733;
+}
+
+.login-forgot-password {
+    font-size: 14px;
+    color: #606062; /* Gris */
+}
+
+.login-forgot-password a {
+    color: #606062;
+    text-decoration: none;
+}
+
+.login-social {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.login-social img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    cursor: pointer;
+}
