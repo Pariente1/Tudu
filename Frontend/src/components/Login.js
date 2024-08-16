@@ -17,8 +17,12 @@ function Login() {
         <a href="#">¿Olvidaste tu contraseña?</a>
       </div>
       <div className="login-social">
-        <img src={googleIcon} alt="Google Login" />
-        <img src={facebookIcon} alt="Facebook Login" />
+        <div className="social-icon">
+          <img src={googleIcon} alt="Google Login" />
+        </div>
+        <div className="social-icon">
+          <img src={facebookIcon} alt="Facebook Login" />
+        </div>
       </div>
     </div>
   );
