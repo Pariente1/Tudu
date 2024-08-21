@@ -1,15 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Login.css';
 import tuduLogo from '../assets/images/tudu_icon.png';
 import googleIcon from '../assets/images/google_icon.png';
-import facebookIcon from '../assets/images/facebook_icon.png';
 import axios from 'axios';
 
-function Login() {
-  // Estados para los campos de entrada y el mensaje
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [message, setMessage] = useState('');
+const Login: React.FC = () => {
+  // Estados para los campos de entrada, el mensaje y el botón deshabilitado
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+  const [message, setMessage] = useState<string>('');
+  const [isDisabled, setIsDisabled] = useState<boolean>(true);
+
+  // Efecto para habilitar o deshabilitar el botón en función de los campos
+  useEffect(() => {
+    if (email.trim() && password.trim()) {
+      setIsDisabled(false);
+    } else {
+      setIsDisabled(true);
+    }
+  }, [email, password]);
 
   // Función para manejar el inicio de sesión
   const handleLogin = async () => {
@@ -32,7 +41,6 @@ function Login() {
          email: email,
          password: password
        });
-      
       
        // Aquí puedes manejar la respuesta del inicio de sesión
        console.log('Respuesta del servidor:', loginResponse.data);
@@ -63,13 +71,14 @@ function Login() {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button className="login-button" onClick={handleLogin}>Login</button>
+      <button className="login-button" onClick={handleLogin} disabled={isDisabled}>
+        Login
+      </button>
       <div className="login-forgot-password">
         <a href="#">¿Olvidaste tu contraseña?</a>
       </div>
       <div className="login-social">
         <img src={googleIcon} alt="Google Login" />
-        <img src={facebookIcon} alt="Facebook Login" />
       </div>
       {message && <p>{message}</p>}
     </div>
