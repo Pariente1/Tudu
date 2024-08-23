@@ -89,3 +89,18 @@ body {
 .social-icon:hover {
   background-color: #000000; /* Fondo negro al hacer hover */
 }
+
+.login-button {
+    background-color: #F5CC39; /* Color original del botón */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-button:disabled {
+    background-color: #606062; /* Color gris cuando está deshabilitado */
+    cursor: not-allowed; /* Cambia el cursor a no permitido */
+  }
+  
