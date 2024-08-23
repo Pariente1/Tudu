@@ -63,6 +63,17 @@ body {
     text-decoration: none;
 }
 
+.login-register-link {
+    font-size: 14px;
+    color: #606062; /* Gris */
+}
+
+.login-register-link a {
+    color: #606062;
+    text-decoration: none;
+}
+
+
 .login-social {
   display: flex;
   justify-content: center;
