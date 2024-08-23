@@ -6,10 +6,11 @@ import axios from 'axios';
 
 const Login: React.FC = () => {
   // Estados para los campos de entrada, el mensaje y el botón deshabilitado
-  const [email, setEmail] = useState<string>('');
+  const [email, setEmail] = useState<string>(''); // Tipo explícito como string
   const [password, setPassword] = useState<string>('');
   const [message, setMessage] = useState<string>('');
-  const [isDisabled, setIsDisabled] = useState<boolean>(true);
+  const [isDisabled, setIsDisabled] = useState<boolean>(true); // Tipo explícito como booleano
+  
 
   // Efecto para habilitar o deshabilitar el botón en función de los campos
   useEffect(() => {
@@ -75,7 +76,10 @@ const Login: React.FC = () => {
         Login
       </button>
       <div className="login-forgot-password">
-        <a href="#">¿Olvidaste tu contraseña?</a>
+        <a href="#">¿Olvidaste tu contraseña? <br /> </a>
+      </div>
+      <div className="login-register-link">
+        <a href="#">regístrate</a>
       </div>
       <div className="login-social">
         <img src={googleIcon} alt="Google Login" />
