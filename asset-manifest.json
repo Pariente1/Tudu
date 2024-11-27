@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Tudu/static/css/main.db294b53.css",
+    "main.js": "/Tudu/static/js/main.baa672ed.js",
+    "index.html": "/Tudu/index.html",
+    "main.db294b53.css.map": "/Tudu/static/css/main.db294b53.css.map",
+    "main.baa672ed.js.map": "/Tudu/static/js/main.baa672ed.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.db294b53.css",
+    "static/js/main.baa672ed.js"
+  ]
+}
