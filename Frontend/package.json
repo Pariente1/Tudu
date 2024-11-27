@@ -1,4 +1,11 @@
 {
+  "homepage": "https://pariente1.github.io/Tudu/",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  }
+}
+{
   "name": "platzi-intro-react-base",
   "version": "0.1.0",
   "dependencies": {
